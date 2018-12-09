@@ -1,7 +1,7 @@
 from flask import Flask
 
 # 程序的入口
-from apps.apis import init_api
+from apps.urls import init_api
 from apps.ext import init_ext
 from apps.hello.views import hello
 
