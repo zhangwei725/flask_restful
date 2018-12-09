@@ -21,7 +21,7 @@ def init_ext(app):
     init_caching(app)
     # 初始化文件上传
     init_upload(app)
-    # 初始化restful
+
 
 
 

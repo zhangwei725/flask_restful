@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://cdn.bootcss.com/jquery/3.1.1/core.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <script type="text/javascript">
+        $(function () {
+            $.get('http://127.0.0.1:5000/api/v2/banners/', function (result) {
+                if (result.status === 200) {
+                    for (let banner of result.data) {
+                        $('#banner').append(
+                            $('<li>').append(
+                                $('<img>').attr('src', 'http://127.0.0.1:5000' + banner.path)
+                            )
+                        )
+                    }
+                }
+            })
 
+
+        })
 
 
     </script>
 </head>
 <body>
-1111111
+<ul id="banner">
+
+</ul>
 </body>
 </html>
